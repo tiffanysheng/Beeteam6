@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body id="body" ng-app="myApp" ng-controller="myController">
+	<header class="top-bar js-top-bar">
+	   <div class="main">
+	    	<div class="navbar navbar-expand-lg navbar-light bg-light" id="navbar1" >
+	    		<a class="navbar-brand" href="index.html"><span style="color: #FF9333">Bee team 6!</span></a>
+	    		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				</button>
+	    		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav mr-auto">
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Questions</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Chat bot</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Tags</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Users</a>
+				      </li>
+				    </ul>
+				    <form class="form-inline my-2 my-lg-0" id="navform" ng-submit="search()">
+				        <input class="form-control mr-sm-2" type="text" class="form-control" placeholder="search..." id="keyword" name="keyword" ng-model="keyword" data-toggle="tooltip" data-placement="bottom" title="Please type a keyword">
+				        
+				   	</form>
+				   	<button type="button" class="btn btn-link my-2 my-sm-2">Log In</button>
+				   	<button type="button" class="btn btn-outline-success my-2 my-sm-7" style="">Sign Up</button>
+			  	</div>
+		   	</div>
+	   </div>
+	</header>
+	<div class="container" style="padding-top: 30px">
+		<div class="container-fluid">
+			<header>
+				<h5>Hive placement: Full Sun?</h5>
+			</header>
+			<div>
+				<span class="fa fa-chevron-up" title="icon name" aria-hidden="true"></span>
+				<span>1</span>
+				<span class="fa fa-chevron-down" title="icon name" aria-hidden="true"></span>
+			</div>
+			<br>
+			<div style="width: 100%">
+				<p>So, I have been doing some reading and multiple people here on BS have said that hives in the full sun perform better than hives in the shade. I have only ever had hives in full shade, so I have no personal opinion/experience on which is better.Can someone add/elaborate to my list of reasons why full sun is better than shade?</p>
+					<p>Morning sun on the face of the hive</p>
+					<p>Fewer pests such as SHB (fewer pests == fewer diseases)</p>
+				<p>I want to hear your experiences. Thank you.</p>
+				
+			</div>
+			<hr align="left" width="100%">
+			<div>
+				<span style="color: blue">Answer #1:</span>
+				<div>
+					<span class="fa fa-chevron-up" title="icon name" aria-hidden="true"></span>
+					<span>2</span>
+					<span class="fa fa-chevron-down" title="icon name" aria-hidden="true"></span>
+				</div>
+				<span class="fa fa-check" style="color: green;"></span>
+				<br>
+				<p>Big time location important question here as in Arizona's desert "full sun" gets ya melted wax in summer running out the bottom, we use trees etc. to get defused sun and avoid creating a Langstroth oven</p>
+			</div>
+			<hr align="left" width="100%">
+			<div>
+				<span style="color: blue">Answer #2:</span>
+				<div>
+					<span class="fa fa-chevron-up" title="icon name" aria-hidden="true"></span>
+					<span>0</span>
+					<span class="fa fa-chevron-down" title="icon name" aria-hidden="true"></span>
+				</div>
+				<br>
+				<p>My hives are in the full sun and they do fine in the summer. No screened bottom boards here. It doesn't get "wax melting" hot here. Maybe a few days at 100-102 but mostly 90's during the summer. Seems like we set a record last year with consecutive days over 90, with close to 120.</p>
+				<p>Remember, the brood nest stays 93 degrees, year round...</p>
+			</div>
+			<hr align="left" width="100%">
+			<br>
+			<footer>
+				<form>
+				  <div class="form-group">
+				    <label for="exampleTextarea" style="color: blue">Your Answer</label>
+				    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+				  </div>
+				  <button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</footer>
+		</div>
+	</div>
+	
+</body>
+</html>

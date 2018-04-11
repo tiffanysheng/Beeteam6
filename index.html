@@ -1,0 +1,318 @@
+<?php header( 'Location: /index.html' ) ; ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</head>
+<body id="body" ng-app="myApp" ng-controller="myController">
+	<header class="top-bar js-top-bar">
+	   <div class="main">
+	    	<div class="navbar navbar-expand-lg navbar-light bg-light" id="navbar1" >
+	    		<a class="navbar-brand" href="#"><span style="color: #FF9333">Bee team 6!</span></a>
+	    		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				</button>
+	    		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav mr-auto">
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Questions</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Chat bot</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Tags</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Users</a>
+				      </li>
+				    </ul>
+				    <form class="form-inline my-2 my-lg-0" id="navform" ng-submit="search()">
+				        <input class="form-control mr-sm-2" type="text" class="form-control" placeholder="search..." id="keyword" name="keyword" ng-model="keyword" data-toggle="tooltip" data-placement="bottom" title="Please type a keyword">
+				        
+				   	</form>
+				   	<button type="button" class="btn btn-link my-2 my-sm-2">Log In</button>
+				   	<button type="button" class="btn btn-outline-success my-2 my-sm-7" style="">Sign Up</button>
+			  	</div>
+		   	</div>
+	   </div>
+	</header>
+	<div class="container" style="padding-top: 30px">
+		<div class="container-fluid">
+			<div class="top">
+				<h5>Top Questions</h5>
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+				  <li class="nav-item">
+				    <a class="nav-link active" id="interesting-tab" data-toggle="tab" href="#interesting" role="tab" aria-controls="interesting" aria-selected="true">interesting</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" id="featured-tab" data-toggle="tab" href="#featured" role="tab" aria-controls="featured" aria-selected="false">featured</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" id="hot-tab" data-toggle="tab" href="#hot" role="tab" aria-controls="hot" aria-selected="false">hot</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" id="week-tab" data-toggle="tab" href="#week" role="tab" aria-controls="week" aria-selected="false">week</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" id="month-tab" data-toggle="tab" href="#month" role="tab" aria-controls="month" aria-selected="false">month</a>
+				  </li>
+				</ul>
+				<div class="tab-content" id="myTabContent">
+				  <div class="tab-pane fade show active" id="interesting" role="tabpanel" aria-labelledby="interesting-tab">
+				  	<div class="table-responsive">
+					  	<table class="table">
+						  <tbody>
+						    <tr>
+						      <td>
+						      	<div style="text-align: center">1</div>
+						      	<div style="text-align: center">votes</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">2</div>
+						      	<div style="text-align: center">answers</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">20</div>
+						      	<div style="text-align: center">views</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">
+						      		<a href="questions.html"><h5>Hive placement: Full Sun?</h5></a>
+						      	</div>
+						      	<div style="text-align: center">
+						      		<a href="#" class="badge badge-secondary">hive</a>
+						      		<a href="#" class="badge badge-secondary">sun</a>
+						      	</div>
+						      </td>
+						      <td>
+						      	<div style="padding-top: 10%">asked 47 secs ago Ellen</div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td>
+						      	<div style="text-align: center">1</div>
+						      	<div style="text-align: center">votes</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">3</div>
+						      	<div style="text-align: center">answers</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">10</div>
+						      	<div style="text-align: center">views</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">
+						      		<a href="#"><h5>Ant Problems/Solutions</h5></a>
+						      	</div>
+						      	<div style="text-align: center">
+						      		<a href="#" class="badge badge-secondary">ant</a>
+						      	</div>
+						      </td>
+						      <td>
+						      	<div style="padding-top: 10%">modified 1 min ago Liondancer</div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td>
+						      	<div style="text-align: center">0</div>
+						      	<div style="text-align: center">votes</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">0</div>
+						      	<div style="text-align: center">answers</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">4</div>
+						      	<div style="text-align: center">views</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">
+						      		<a href="#"><h5>Bt (Bacillus thuringiensis - biological control of wax moth larva)</h5></a>
+						      	</div>
+						      	<div style="text-align: center">
+						      		<a href="#" class="badge badge-secondary">biological</a>
+						      		<a href="#" class="badge badge-secondary">bt</a>
+						      		<a href="#" class="badge badge-secondary">moth</a>
+						      		<a href="#" class="badge badge-secondary">larva</a>
+						      	</div>
+						      </td>
+						      <td>
+						      	<div style="padding-top: 10%">modified 2 mins ago DeanOC</div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td>
+						      	<div style="text-align: center">0</div>
+						      	<div style="text-align: center">votes</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">1</div>
+						      	<div style="text-align: center">answers</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">4</div>
+						      	<div style="text-align: center">views</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">
+						      		<a href="#"><h5>Hive body manufacturing (from boards)</h5></a>
+						      	</div>
+						      	<div style="text-align: center">
+						      		<a href="#" class="badge badge-secondary">hive</a>
+						      		<a href="#" class="badge badge-secondary">body manufacturing</a>
+						      	</div>
+						      </td>
+						      <td>
+						      	<div style="padding-top: 10%">answered 4 mins ago Gregor</div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td>
+						      	<div style="text-align: center">1</div>
+						      	<div style="text-align: center">votes</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">0</div>
+						      	<div style="text-align: center">answers</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">9</div>
+						      	<div style="text-align: center">views</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">
+						      		<a href="#"><h5>Hive internal monitoring (with sensors)</h5></a>
+						      	</div>
+						      	<div style="text-align: center">
+						      		<a href="#" class="badge badge-secondary">hive</a>
+						      		<a href="#" class="badge badge-secondary">sensors</a>
+						      	</div>
+						      </td>
+						      <td>
+						      	<div style="padding-top: 10%">asked 4 mins ago A.Code.1</div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td>
+						      	<div style="text-align: center">0</div>
+						      	<div style="text-align: center">votes</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">1</div>
+						      	<div style="text-align: center">answers</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">20</div>
+						      	<div style="text-align: center">views</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">
+						      		<a href="#"><h5>Pallets (for palletized hives)</h5></a>
+						      	</div>
+						      	<div style="text-align: center">
+						      		<a href="#" class="badge badge-secondary">hive</a>
+						      		<a href="#" class="badge badge-secondary">pallets</a>
+						      	</div>
+						      </td>
+						      <td>
+						      	<div style="padding-top: 10%">answered 7 mins ago zack raiyan</div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td>
+						      	<div style="text-align: center">0</div>
+						      	<div style="text-align: center">votes</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">0</div>
+						      	<div style="text-align: center">answers</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">6</div>
+						      	<div style="text-align: center">views</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">
+						      		<a href="#"><h5>Sugar Syrup/Block Recipe</h5></a>
+						      	</div>
+						      	<div style="text-align: center">
+						      		<a href="#" class="badge badge-secondary">sugar</a>
+						      		<a href="#" class="badge badge-secondary">syrup</a>
+						      	</div>
+						      </td>
+						      <td>
+						      	<div style="padding-top: 10%">modified 7 mins ago efeezyubeezy</div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td>
+						      	<div style="text-align: center">0</div>
+						      	<div style="text-align: center">votes</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">0</div>
+						      	<div style="text-align: center">answers</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">1</div>
+						      	<div style="text-align: center">views</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">
+						      		<a href="#"><h5>Wax dipping of hive bodies</h5></a>
+						      	</div>
+						      	<div style="text-align: center">
+						      		<a href="#" class="badge badge-secondary">wax dipping</a>
+						      	</div>
+						      </td>
+						      <td>
+						      	<div style="padding-top: 10%">asked 7 mins ago rgoal</div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td>
+						      	<div style="text-align: center">0</div>
+						      	<div style="text-align: center">votes</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">0</div>
+						      	<div style="text-align: center">answers</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">1</div>
+						      	<div style="text-align: center">views</div>
+						      </td>
+						      <td>
+						      	<div style="text-align: center">
+						      		<a href="#"><h5>Frame Component Manufacturing</h5></a>
+						      	</div>
+						      	<div style="text-align: center">
+						      		<a href="#" class="badge badge-secondary">manufacturing</a>
+						      	</div>
+						      </td>
+						      <td>
+						      	<div style="padding-top: 10%">asked 47 secs ago Ellen 28</div>
+						      </td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				  </div>
+				  <div class="tab-pane fade" id="featured" role="tabpanel" aria-labelledby="featured-tab">...2</div>
+				  <div class="tab-pane fade" id="hot" role="tabpanel" aria-labelledby="hot-tab">...</div>
+				  <div class="tab-pane fade" id="week" role="tabpanel" aria-labelledby="week-tab">...</div>
+				  <div class="tab-pane fade" id="month" role="tabpanel" aria-labelledby="month-tab">...</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
